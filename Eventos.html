@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--button class= ""-->
+
+    <div id = "root">
+        <button v-on:click="showMessage"> click </button>
+        <button @click= "showMassage"> click</button>
+        <button @{event} = "ShowMassage"> Evento dinamico</button>
+
+    </div>
+
+
+    <script>
+
+  
+
+        new Vue({
+
+            /*el:'root',
+            data:{
+                event:"mouseenter"
+            },*/
+            data(){
+                return{
+                    events:{
+                        click: () =>alert("Has hecho click sobre el boton"),
+                        mouseenter: () => ("esta sobre el boton")
+                       
+                    }
+                }
+
+
+            },
+            methods:{
+                showMessage(){
+                    alert("Programacion IV");
+                }
+            }
+
+
+
+        });
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html> 
